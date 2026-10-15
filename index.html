@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mis 18 Años | César Jhair</title>
+
+  <!-- 1. CDN Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- 2. Tipografías Luxury: Cinzel (Titulares) + Plus Jakarta Sans (Cuerpo) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+
+  <!-- 3. AOS (Animate On Scroll) CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+  <!-- 4. Lucide Icons (Íconos Vectoriales) -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- 5. Canvas Confetti (Librería de Confeti) -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+
+  <!-- 6. Tu Hoja de Estilos Personalizada -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body
+  class="bg-[#05070c] text-slate-200 min-h-screen antialiased selection:bg-[#D4AF37] selection:text-slate-950 relative overflow-x-hidden">
+
+  <!-- Fondo de Luz Ambiental Minimalista -->
+  <div class="fixed inset-0 pointer-events-none z-0">
+    <div
+      class="absolute -top-40 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-[#D4AF37]/5 rounded-full blur-[180px]">
+    </div>
+    <div class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-blue-900/10 rounded-full blur-[180px]"></div>
+  </div>
+
+  <div class="relative z-10">
+
+    <!-- ================= 1. SECCIÓN PRINCIPAL (HERO) CON MÚSICA ================= -->
+    <header
+      class="min-h-screen flex flex-col justify-center items-center text-center px-6 py-20 relative border-b border-[#D4AF37]/20">
+
+      <!-- Marco Finísimo Superior -->
+      <div
+        class="absolute top-8 left-8 right-8 bottom-8 border border-[#D4AF37]/15 pointer-events-none hidden md:block">
+      </div>
+
+      <div data-aos="fade-down" data-aos-duration="1200" class="space-y-3">
+        <p class="text-[#D4AF37] text-xs sm:text-sm font-medium tracking-[0.35em] uppercase">
+          XVIII • DICIEMBRE XXXI
+        </p>
+        <p class="text-slate-400 text-xs tracking-[0.2em] uppercase">
+          Te invito a celebrar conmigo
+        </p>
+      </div>
+
+      <hgroup data-aos="zoom-in" data-aos-duration="1400" class="my-8 flex flex-col items-center">
+        <!-- Número 18 Emblemático con Cuadro Elegante -->
+        <figure
+          class="w-24 h-24 sm:w-28 sm:h-28 border border-[#D4AF37]/40 bg-[#0a0e17]/80 flex items-center justify-center mb-6 shadow-[0_0_30px_rgba(212,175,55,0.1)] gold-pulse">
+          <span class="text-4xl sm:text-5xl font-extrabold gold-gradient-text">18</span>
+        </figure>
+
+        <!-- Título Principal -->
+        <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-wider text-white uppercase drop-shadow-sm">
+          Mis 18 Años
+        </h1>
+
+        <div class="w-16 h-[1px] bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent my-4"></div>
+
+        <!-- Subtítulo -->
+        <p class="text-2xl sm:text-3xl text-[#D4AF37] font-serif-luxury tracking-widest uppercase">
+          César Jhair
+        </p>
+      </hgroup>
+
+      <!-- Botón Reproductor de Música con Ecualizador Animado -->
+      <div data-aos="fade-up" data-aos-duration="1200" class="mt-4">
+        <button id="music-btn" type="button"
+          class="px-7 py-3 bg-[#0a0e17] hover:bg-[#111726] text-[#D4AF37] border border-[#D4AF37]/35 transition-all text-xs tracking-[0.2em] uppercase font-semibold flex items-center gap-3 cursor-pointer shadow-lg active:scale-95">
+          <i data-lucide="music" class="w-4 h-4 text-[#D4AF37]"></i>
+          <span id="music-btn-text">Reproducir Música</span>
+
+          <!-- Contenedor del Ecualizador Animado -->
+          <div id="equalizer" class="flex items-end gap-1 h-4 ml-1">
+            <div class="eq-bar"></div>
+            <div class="eq-bar"></div>
+            <div class="eq-bar"></div>
+            <div class="eq-bar"></div>
+          </div>
+        </button>
+        <audio id="bg-music" src="music/Rockstar.mp3" loop preload="auto"></audio>
+      </div>
+
+      <!-- ================= SECCIÓN: PADRES Y PADRINOS ================= -->
+      <section data-aos="fade-up" data-aos-duration="1000" aria-labelledby="family-heading" class="space-y-8 mt-12">
+        <h2 id="family-heading" class="sr-only">Mis Padres y Padrinos</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+
+          <!-- Tarjeta Mis Padres -->
+          <article data-aos="fade-right" data-aos-duration="1000"
+            class="luxury-card p-8 text-center flex flex-col items-center justify-center space-y-5">
+            <div class="p-3 border border-[#D4AF37]/30 bg-[#05070c] text-[#D4AF37]">
+              <i data-lucide="heart" class="w-6 h-6"></i>
+            </div>
+
+            <div class="space-y-1">
+              <h3 class="text-xl font-bold text-[#D4AF37] uppercase tracking-wider">Mis Padres</h3>
+              <p class="text-slate-400 text-xs tracking-widest uppercase">Con la bendición y apoyo de</p>
+            </div>
+
+            <div class="w-12 h-[1px] bg-[#D4AF37]/30 my-1"></div>
+
+            <div class="space-y-2">
+              <p class="text-slate-100 font-serif-luxury text-lg tracking-wide">Julio César Castilla Vivanco</p>
+              <p class="text-slate-100 font-serif-luxury text-lg tracking-wide">Rosario Alderete Escajadillo</p>
+            </div>
+          </article>
+
+          <!-- Tarjeta Mis Padrinos -->
+          <article data-aos="fade-left" data-aos-duration="1000"
+            class="luxury-card p-8 text-center flex flex-col items-center justify-center space-y-5">
+            <div class="p-3 border border-[#D4AF37]/30 bg-[#05070c] text-[#D4AF37]">
+              <i data-lucide="sparkles" class="w-6 h-6"></i>
+            </div>
+
+            <div class="space-y-1">
+              <h3 class="text-xl font-bold text-[#D4AF37] uppercase tracking-wider">Mis Padrinos</h3>
+              <p class="text-slate-400 text-xs tracking-widest uppercase">Guías en esta nueva etapa</p>
+            </div>
+
+            <div class="w-12 h-[1px] bg-[#D4AF37]/30 my-1"></div>
+
+            <div class="space-y-2">
+              <p class="text-slate-100 font-serif-luxury text-lg tracking-wide">Daniel Crisostomo</p>
+              <p class="text-slate-100 font-serif-luxury text-lg tracking-wide">Nombre de la Madrina</p>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- Flecha de Desplazamiento -->
+      <div class="absolute bottom-10 text-[#D4AF37]/50 animate-float">
+        <i data-lucide="chevron-down" class="w-6 h-6"></i>
+      </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-6 py-20 space-y-20">
+
+      <!-- ================= 2. CUENTA REGRESIVA ================= -->
+      <section data-aos="fade-up" data-aos-duration="1000" aria-labelledby="countdown-heading"
+        class="luxury-card p-8 sm:p-12 text-center">
+        <p id="countdown-heading" class="text-[#D4AF37] text-xs font-semibold uppercase tracking-[0.3em] mb-8">
+          Cuenta Regresiva para la Recepción
+        </p>
+
+        <aside aria-label="Tiempo restante para el evento"
+          class="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-2xl mx-auto">
+          <time datetime="P0D"
+            class="bg-[#05070c]/90 border border-slate-800 p-5 flex flex-col items-center justify-center">
+            <span id="days" class="text-3xl sm:text-5xl font-extrabold gold-gradient-text font-serif-luxury">0</span>
+            <span class="text-[10px] text-slate-400 font-semibold uppercase tracking-[0.2em] mt-2">Días</span>
+          </time>
+          <time datetime="P0H"
+            class="bg-[#05070c]/90 border border-slate-800 p-5 flex flex-col items-center justify-center">
+            <span id="hours" class="text-3xl sm:text-5xl font-extrabold gold-gradient-text font-serif-luxury">00</span>
+            <span class="text-[10px] text-slate-400 font-semibold uppercase tracking-[0.2em] mt-2">Horas</span>
+          </time>
+          <time datetime="P0M"
+            class="bg-[#05070c]/90 border border-slate-800 p-5 flex flex-col items-center justify-center">
+            <span id="minutes"
+              class="text-3xl sm:text-5xl font-extrabold gold-gradient-text font-serif-luxury">00</span>
+            <span class="text-[10px] text-slate-400 font-semibold uppercase tracking-[0.2em] mt-2">Minutos</span>
+          </time>
+          <time datetime="P0S"
+            class="bg-[#05070c]/90 border border-slate-800 p-5 flex flex-col items-center justify-center">
+            <span id="seconds"
+              class="text-3xl sm:text-5xl font-extrabold gold-gradient-text font-serif-luxury">00</span>
+            <span class="text-[10px] text-slate-400 font-semibold uppercase tracking-[0.2em] mt-2">Segundos</span>
+          </time>
+        </aside>
+      </section>
+
+      <!-- ================= 3. DETALLES DE EVENTOS (MISA Y RECEPCIÓN) ================= -->
+      <section aria-labelledby="details-heading" class="space-y-8">
+        <h2 id="details-heading" class="sr-only">Detalles del evento</h2>
+
+        <!-- Dos Tarjetas Integradas -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+
+          <!-- Tarjeta 1: Santa Misa -->
+          <article data-aos="fade-right" data-aos-duration="1000"
+            class="luxury-card p-8 text-center flex flex-col items-center justify-between space-y-6">
+            <div class="space-y-4 flex flex-col items-center w-full">
+              <div class="p-3 border border-[#D4AF37]/30 bg-[#05070c] text-[#D4AF37]">
+                <i data-lucide="church" class="w-6 h-6"></i>
+              </div>
+
+              <div class="space-y-1">
+                <h3 class="text-xl font-bold text-[#D4AF37] uppercase tracking-wider">Santa Misa</h3>
+                <span
+                  class="inline-block text-[10px] text-slate-400 border border-slate-800 bg-[#05070c] px-3 py-0.5 uppercase tracking-widest mt-1">
+                  Asistencia Opcional
+                </span>
+              </div>
+
+              <div class="w-12 h-[1px] bg-[#D4AF37]/30 my-1"></div>
+
+              <!-- Fecha y Hora -->
+              <div class="space-y-1">
+                <p class="text-slate-100 font-medium text-base"><time datetime="2026-12-31T17:00">Jueves, 31 de Diciembre</time></p>
+                <p class="text-slate-300 font-semibold text-xs tracking-wider uppercase">Hora: <time datetime="17:00">5:00 PM</time></p>
+              </div>
+
+              <!-- Dirección de la Misa -->
+              <div class="pt-2 text-slate-300 text-xs tracking-wide">
+                <p class="font-semibold text-slate-200">Iglesia de Sunampe</p>
+                <address class="not-italic text-slate-400">Sunampe, Chincha, Ica</address>
+              </div>
+            </div>
+
+            <!-- Botones de Acción (Maps y Agendar Dorado) -->
+            <div class="grid grid-cols-2 gap-2 w-full mt-4">
+              <a href="https://maps.app.goo.gl/oPpcwHhSEeEhL9q69" target="_blank" rel="noopener noreferrer"
+                class="inline-flex items-center justify-center gap-1.5 px-3 py-2.5 bg-[#05070c] hover:bg-slate-900 text-[#D4AF37] border border-[#D4AF37]/40 text-[11px] tracking-wider uppercase transition-all shadow-md active:scale-95">
+                <span>Maps</span>
+                <i data-lucide="external-link" class="w-3 h-3 text-[#D4AF37]"></i>
+              </a>
+              <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Santa+Misa+%7C+Mis+18+A%C3%B1os+de+C%C3%A9sar+Jhair&dates=20261231T170000/20261231T190000&details=Santa+misa+por+los+18+a%C3%B1os+de+C%C3%A9sar+Jhair.+Asistencia+opcional.&location=Iglesia+de+Sunampe,+Sunampe,+Chincha,+Ica" 
+                target="_blank" rel="noopener noreferrer"
+                class="inline-flex items-center justify-center gap-1.5 px-3 py-2.5 gold-gradient-bg text-slate-950 font-bold text-[11px] tracking-wider uppercase transition-all shadow-md active:scale-95">
+                <span>Agendar</span>
+                <i data-lucide="calendar-plus" class="w-3 h-3 text-slate-950"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Tarjeta 2: Recepción / Evento Principal -->
+          <article data-aos="fade-left" data-aos-duration="1000"
+            class="luxury-card p-8 text-center flex flex-col items-center justify-between space-y-6 border-[#D4AF37]/40 shadow-[0_0_25px_rgba(212,175,55,0.08)]">
+            <div class="space-y-4 flex flex-col items-center w-full">
+              <div class="p-3 border border-[#D4AF37]/50 bg-[#05070c] text-[#D4AF37]">
+                <i data-lucide="party-popper" class="w-6 h-6"></i>
+              </div>
+
+              <div class="space-y-1">
+                <h3 class="text-xl font-bold text-[#D4AF37] uppercase tracking-wider">Recepción</h3>
+                <span
+                  class="inline-block text-[10px] text-[#D4AF37] border border-[#D4AF37]/40 bg-[#05070c] px-3 py-0.5 uppercase tracking-widest font-semibold mt-1">
+                  Evento Principal
+                </span>
+              </div>
+
+              <div class="w-12 h-[1px] bg-[#D4AF37]/30 my-1"></div>
+
+              <!-- Fecha y Hora -->
+              <div class="space-y-1">
+                <p class="text-slate-100 font-medium text-base"><time datetime="2026-12-31T22:00">Jueves, 31 de Diciembre</time></p>
+                <p class="text-slate-300 font-semibold text-xs tracking-wider uppercase">Hora: <time datetime="22:00">10:00 PM</time></p>
+              </div>
+
+              <!-- Dirección del Local -->
+              <div class="pt-2 text-slate-300 text-xs tracking-wide">
+                <p class="font-semibold text-slate-200">Local de Recepción</p>
+                <address class="not-italic text-slate-400">Sunampe, Chincha, Ica</address>
+              </div>
+            </div>
+
+            <!-- Botones de Acción (Maps y Agendar Dorado) -->
+            <div class="grid grid-cols-2 gap-2 w-full mt-4">
+              <a href="https://maps.app.goo.gl/krshLaDEU4M59i249" target="_blank" rel="noopener noreferrer"
+                class="inline-flex items-center justify-center gap-1.5 px-3 py-2.5 bg-[#05070c] hover:bg-slate-900 text-[#D4AF37] border border-[#D4AF37]/40 text-[11px] tracking-wider uppercase transition-all shadow-md active:scale-95">
+                <span>Maps</span>
+                <i data-lucide="external-link" class="w-3 h-3 text-[#D4AF37]"></i>
+              </a>
+              <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Mis+18+A%C3%B1os+%7C+C%C3%A9sar+Jhair&dates=20261231T220000/20270101T040000&details=Te+espero+para+celebrar+juntos+mis+18+a%C3%B1os.+%C2%A1No+faltes%21&location=Sunampe,+Chincha,+Ica" 
+                target="_blank" rel="noopener noreferrer"
+                class="inline-flex items-center justify-center gap-1.5 px-3 py-2.5 gold-gradient-bg text-slate-950 font-bold text-[11px] tracking-wider uppercase transition-all shadow-md active:scale-95">
+                <span>Agendar</span>
+                <i data-lucide="calendar-plus" class="w-3 h-3 text-slate-950"></i>
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- ================= 4. CÓDIGO DE VESTIMENTA ================= -->
+      <section data-aos="fade-up" data-aos-duration="1000" aria-labelledby="info-heading">
+        <h2 id="info-heading" class="sr-only">Información de la fiesta</h2>
+
+        <article class="luxury-card p-8 text-center max-w-md mx-auto flex flex-col items-center space-y-3">
+          <div class="p-3 border border-[#D4AF37]/30 bg-[#05070c] text-[#D4AF37]">
+            <i data-lucide="shirt" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-bold text-[#D4AF37] uppercase tracking-wider">Código de Vestimenta</h3>
+          <p class="text-slate-200 font-medium text-base tracking-wide">Sport Elegante</p>
+        </article>
+      </section>
+
+      <!-- ================= 5. SOBRE DIGITAL INTERACTIVO (OBSEQUIOS) ================= -->
+      <section data-aos="fade-up" data-aos-duration="1000" aria-labelledby="gift-heading" class="text-center space-y-6">
+        <h2 id="gift-heading" class="text-xs font-semibold text-[#D4AF37] uppercase tracking-[0.3em]">
+          Muestra de Afecto & Presentes
+        </h2>
+
+        <div id="envelope-wrapper" class="envelope-wrapper">
+          <div class="envelope-container pt-12 pb-4 px-4">
+            <!-- Solapa 3D del Sobre -->
+            <div class="envelope-flap"></div>
+            <!-- Sello de Cera Dorado -->
+            <div class="envelope-seal font-serif-luxury font-bold text-xs">XVIII</div>
+
+            <!-- Tarjeta desplegable dentro del sobre -->
+            <div class="envelope-card space-y-4">
+              <div
+                class="p-2 border border-[#D4AF37]/30 bg-[#0a0e17] w-10 h-10 mx-auto flex items-center justify-center text-[#D4AF37]">
+                <i data-lucide="gift" class="w-5 h-5"></i>
+              </div>
+
+              <p class="text-xs text-slate-300 tracking-wider uppercase">
+                Tu presencia es mi mejor regalo. Si deseas realizar un presente adicional:
+              </p>
+
+              <div class="p-4 bg-[#0a0e17] border border-slate-800 space-y-2 text-left text-xs relative">
+                <p class="text-[#D4AF37] font-semibold tracking-wider uppercase">Número de Yape</p>
+                <p class="text-slate-300 font-medium flex items-center justify-between">
+                  <span>Número: <span id="yape-number" class="text-slate-100 font-bold">981995393</span></span>
+                  <span id="copy-badge"
+                    class="text-[10px] text-emerald-400 bg-emerald-950/80 border border-emerald-500/40 px-2 py-0.5 rounded opacity-0 transition-opacity">¡Copiado!</span>
+                </p>
+              </div>
+
+              <p id="envelope-hint" class="text-[10px] text-[#D4AF37] tracking-widest uppercase font-semibold">
+                ✨ Toca para abrir el sobre
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= 6. CONFIRMACIÓN (RSVP) ================= -->
+      <section data-aos="fade-up" data-aos-duration="1000" aria-labelledby="rsvp-heading"
+        class="luxury-card p-8 sm:p-12 text-center relative">
+        <article>
+          <h3 id="rsvp-heading" class="text-3xl font-extrabold gold-gradient-text uppercase tracking-wider mb-2">
+            Confirmación de Asistencia
+          </h3>
+          <p class="text-slate-400 text-xs tracking-widest uppercase mb-8">
+            Favor de confirmar tu presencia directamente a WhatsApp
+          </p>
+
+          <div id="rsvp-container">
+            <form id="rsvp-form" class="space-y-6 max-w-md mx-auto text-left">
+              <div>
+                <label for="guest-name"
+                  class="block text-xs font-semibold text-[#D4AF37] uppercase tracking-widest mb-2">Tu Nombre
+                  Completo:</label>
+                <input type="text" id="guest-name" placeholder="Ej. César Jhair" required autocomplete="name"
+                  class="w-full px-4 py-3.5 bg-[#05070c] border border-slate-800 text-slate-100 placeholder-slate-600 focus:outline-none focus:border-[#D4AF37] transition-all text-sm">
+              </div>
+
+              <fieldset class="space-y-3">
+                <legend class="text-xs font-semibold text-[#D4AF37] uppercase tracking-widest mb-2">¿Cuántos
+                  acompañantes llevarás?</legend>
+                <div class="grid grid-cols-5 gap-2 sm:gap-3">
+                  <!-- Opción Solo -->
+                  <label
+                    class="flex flex-col items-center justify-center p-3 bg-[#05070c] border border-slate-800 cursor-pointer hover:border-[#D4AF37]/50 has-[:checked]:border-[#D4AF37] has-[:checked]:bg-[#D4AF37]/10 transition-all">
+                    <input type="radio" name="guests" value="0" checked class="accent-[#D4AF37] mb-1">
+                    <span class="text-xs font-bold text-slate-100">Solo</span>
+                  </label>
+                  <!-- Opción 1 -->
+                  <label
+                    class="flex flex-col items-center justify-center p-3 bg-[#05070c] border border-slate-800 cursor-pointer hover:border-[#D4AF37]/50 has-[:checked]:border-[#D4AF37] has-[:checked]:bg-[#D4AF37]/10 transition-all">
+                    <input type="radio" name="guests" value="1" class="accent-[#D4AF37] mb-1">
+                    <span class="text-sm font-bold text-slate-100">1</span>
+                  </label>
+                  <!-- Opción 2 -->
+                  <label
+                    class="flex flex-col items-center justify-center p-3 bg-[#05070c] border border-slate-800 cursor-pointer hover:border-[#D4AF37]/50 has-[:checked]:border-[#D4AF37] has-[:checked]:bg-[#D4AF37]/10 transition-all">
+                    <input type="radio" name="guests" value="2" class="accent-[#D4AF37] mb-1">
+                    <span class="text-sm font-bold text-slate-100">2</span>
+                  </label>
+                  <!-- Opción 3 -->
+                  <label
+                    class="flex flex-col items-center justify-center p-3 bg-[#05070c] border border-slate-800 cursor-pointer hover:border-[#D4AF37]/50 has-[:checked]:border-[#D4AF37] has-[:checked]:bg-[#D4AF37]/10 transition-all">
+                    <input type="radio" name="guests" value="3" class="accent-[#D4AF37] mb-1">
+                    <span class="text-sm font-bold text-slate-100">3</span>
+                  </label>
+                  <!-- Opción 4 -->
+                  <label
+                    class="flex flex-col items-center justify-center p-3 bg-[#05070c] border border-slate-800 cursor-pointer hover:border-[#D4AF37]/50 has-[:checked]:border-[#D4AF37] has-[:checked]:bg-[#D4AF37]/10 transition-all">
+                    <input type="radio" name="guests" value="4" class="accent-[#D4AF37] mb-1">
+                    <span class="text-sm font-bold text-slate-100">4</span>
+                  </label>
+                </div>
+              </fieldset>
+
+              <button type="submit"
+                class="w-full py-4 px-6 gold-gradient-bg text-slate-950 font-bold text-xs tracking-[0.2em] uppercase transition-all cursor-pointer shadow-xl active:scale-95 flex items-center justify-center gap-3">
+                <i data-lucide="message-circle" class="w-4 h-4 text-slate-950"></i>
+                <span>Confirmar por WhatsApp</span>
+              </button>
+            </form>
+          </div>
+
+          <!-- Mensaje tras confirmar -->
+          <div id="rsvp-success" style="display: none;" class="py-8 space-y-3">
+            <div
+              class="w-12 h-12 border border-emerald-500/50 bg-[#05070c] flex items-center justify-center mx-auto text-emerald-400">
+              <i data-lucide="check" class="w-6 h-6"></i>
+            </div>
+            <p class="text-xl font-bold text-emerald-400 uppercase tracking-wider">Asistencia Registrada</p>
+            <p class="text-xs text-slate-400 tracking-wider uppercase">Gracias por confirmar desde este dispositivo.
+              ¡Nos vemos en la celebración!</p>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <!-- ================= PIE DE PÁGINA ================= -->
+    <footer class="py-12 text-center text-[10px] text-slate-500 tracking-[0.3em] uppercase border-t border-slate-900">
+      <p>CÉSAR JHAIR • XVIII AÑOS • MMVIII - MMXXVI</p>
+    </footer>
+
+  </div>
+
+  <!-- 7. Scripts: AOS + Lucide Initialization -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      once: true,
+      duration: 1000
+    });
+    lucide.createIcons();
+  </script>
+  <script src="script.js"></script>
+</body>
+
+</html>
